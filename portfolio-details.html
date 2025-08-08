@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Portfolio Details - AI/ML Engineer Portfolio</title>
+  <meta content="Detailed view of AI and Machine Learning projects including Code Analysis Tools, ML Automation, and Cloud Infrastructure" name="description">
+  <meta content="AI, Machine Learning, Code Analysis, AutoML, DevOps, Portfolio" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -26,14 +26,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="portfolio-details-page">
@@ -46,9 +38,7 @@
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Alex Smith</h1>
+      <h1 class="sitename">AI/ML Engineer</h1>
     </a>
 
     <div class="social-links text-center">
@@ -61,29 +51,12 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
 
@@ -94,11 +67,12 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">Project Details</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">Project Details</li>
           </ol>
         </nav>
       </div>
@@ -109,68 +83,361 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4">
+        <!-- Project Selection Tabs -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <ul class="nav nav-pills justify-content-center project-tabs" id="projectTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="code-analysis-tab" data-bs-toggle="pill" data-bs-target="#code-analysis" type="button" role="tab">Code Analysis Tool</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ml-automation-tab" data-bs-toggle="pill" data-bs-target="#ml-automation" type="button" role="tab">ML Automation</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="huggingface-tab" data-bs-toggle="pill" data-bs-target="#huggingface" type="button" role="tab">Hugging Face Chat</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="devops-tab" data-bs-toggle="pill" data-bs-target="#devops" type="button" role="tab">DevOps Projects</button>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
+        <div class="tab-content" id="projectTabsContent">
+          
+          <!-- Code Analysis Tool Project -->
+          <div class="tab-pane fade show active" id="code-analysis" role="tabpanel">
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper init-swiper">
+                  <script type="application/json" class="swiper-config">
+                    {
+                      "loop": true,
+                      "speed": 600,
+                      "autoplay": {
+                        "delay": 5000
+                      },
+                      "slidesPerView": "auto",
+                      "pagination": {
+                        "el": ".swiper-pagination",
+                        "type": "bullets",
+                        "clickable": true
+                      }
+                    }
+                  </script>
 
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/app-1.jpg" alt="">
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                      <video controls class="w-100" poster="assets/img/portfolio/code-analysis-thumbnail.jpg">
+                        <source src="assets/videos/Code_enhacnerFinal.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/code-analysis-dashboard.jpg" alt="Code Analysis Dashboard">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/code-analysis-results.jpg" alt="Analysis Results">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/code-analysis-refactoring.jpg" alt="Automated Refactoring">
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
                 </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/product-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/branding-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/books-1.jpg" alt="">
-                </div>
-
               </div>
-              <div class="swiper-pagination"></div>
+
+              <div class="col-lg-4">
+                <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                  <h3>Project Information</h3>
+                  <ul>
+                    <li><strong>Category</strong>: Machine Learning / Code Analysis</li>
+                    <li><strong>Technologies</strong>: Python, TensorFlow, NLP, AST Parsing</li>
+                    <li><strong>Project Date</strong>: 2024</li>
+                    <li><strong>Status</strong>: Active Development</li>
+                    <li><strong>GitHub</strong>: <a href="#" target="_blank">View Repository</a></li>
+                    <li><strong>Demo</strong>: <a href="#" target="_blank">Live Demo</a></li>
+                  </ul>
+                </div>
+                <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                  <h2>AI-Powered Code Analysis & Enhancement Tool</h2>
+                  <p>
+                    An intelligent code analysis system that leverages machine learning to detect inefficient patterns, 
+                    security vulnerabilities, and performance bottlenecks in Python, Java, and C++ codebases.
+                  </p>
+                  <h4>Key Features:</h4>
+                  <ul>
+                    <li><strong>Real-time Analysis</strong>: Instant feedback on code quality and performance</li>
+                    <li><strong>Smart Refactoring</strong>: AI-powered suggestions for code optimization</li>
+                    <li><strong>Multi-language Support</strong>: Python, Java, C++, and JavaScript</li>
+                    <li><strong>Performance Metrics</strong>: Detailed analysis of time and space complexity</li>
+                    <li><strong>Security Scanning</strong>: Detection of common security vulnerabilities</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
+          <!-- ML Automation Project -->
+          <div class="tab-pane fade" id="ml-automation" role="tabpanel">
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper init-swiper">
+                  <script type="application/json" class="swiper-config">
+                    {
+                      "loop": true,
+                      "speed": 600,
+                      "autoplay": {
+                        "delay": 5000
+                      },
+                      "slidesPerView": "auto",
+                      "pagination": {
+                        "el": ".swiper-pagination",
+                        "type": "bullets",
+                        "clickable": true
+                      }
+                    }
+                  </script>
+
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/automMl.png" alt="ML Automation Dashboard">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/automMl_results.png" alt="Generated Reports">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/ml-automation-workflow.jpg" alt="Multi-Agent Workflow">
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                  <h3>Project Information</h3>
+                  <ul>
+                    <li><strong>Category</strong>: AutoML / Multi-Agent Systems</li>
+                    <li><strong>Technologies</strong>: CrewAI, Python, Pandas, Scikit-learn</li>
+                    <li><strong>Project Date</strong>: 2024</li>
+                    <li><strong>Status</strong>: Production Ready</li>
+                    <li><strong>Demo</strong>: <a href="#" target="_blank">Try AutoML</a></li>
+                  </ul>
+                </div>
+                <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                  <h2>Autonomous ML Pipeline with Multi-Agent System</h2>
+                  <p>
+                    A revolutionary AutoML platform that uses AI agents to automatically handle the entire machine learning 
+                    pipeline from data preprocessing to model deployment and reporting.
+                  </p>
+                  <h4>Core Capabilities:</h4>
+                  <ul>
+                    <li><strong>Autonomous Data Processing</strong>: Agents handle cleaning, feature engineering, and validation</li>
+                    <li><strong>Model Selection</strong>: AI chooses optimal algorithms based on data characteristics</li>
+                    <li><strong>Hyperparameter Tuning</strong>: Automated optimization using advanced search strategies</li>
+                    <li><strong>Comprehensive Reporting</strong>: Detailed analysis and visualization of results</li>
+                    <li><strong>One-Click Deployment</strong>: Seamless model deployment to production</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
+          <!-- Hugging Face Chat Project -->
+          <div class="tab-pane fade" id="huggingface" role="tabpanel">
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper init-swiper">
+                  <script type="application/json" class="swiper-config">
+                    {
+                      "loop": true,
+                      "speed": 600,
+                      "autoplay": {
+                        "delay": 5000
+                      },
+                      "slidesPerView": "auto",
+                      "pagination": {
+                        "el": ".swiper-pagination",
+                        "type": "bullets",
+                        "clickable": true
+                      }
+                    }
+                  </script>
+
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/huggingface-interface.jpg" alt="Chat Interface">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/huggingface-nlp.jpg" alt="NLP Features">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/huggingface-image-gen.jpg" alt="Image Generation">
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                  <h3>Project Information</h3>
+                  <ul>
+                    <li><strong>Category</strong>: NLP / AI Chat Application</li>
+                    <li><strong>Technologies</strong>: Streamlit, Hugging Face, Transformers</li>
+                    <li><strong>Project Date</strong>: 2024</li>
+                    <li><strong>Status</strong>: Live Demo Available</li>
+                    <li><strong>Live App</strong>: <a href="#" target="_blank">Try Now</a></li>
+                  </ul>
+                </div>
+                <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                  <h2>Multi-Modal AI Chat Interface</h2>
+                  <p>
+                    A comprehensive AI-powered chat application integrating multiple Hugging Face models for 
+                    text processing, image generation, and intelligent conversation.
+                  </p>
+                  <h4>Features:</h4>
+                  <ul>
+                    <li><strong>Text Classification</strong>: Sentiment analysis and content categorization</li>
+                    <li><strong>Language Translation</strong>: Multi-language support with high accuracy</li>
+                    <li><strong>Text Summarization</strong>: Automatic document and article summarization</li>
+                    <li><strong>Image Generation</strong>: Stable Diffusion integration for AI art creation</li>
+                    <li><strong>Conversational AI</strong>: Natural language understanding and response</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DevOps Projects -->
+          <div class="tab-pane fade" id="devops" role="tabpanel">
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper init-swiper">
+                  <script type="application/json" class="swiper-config">
+                    {
+                      "loop": true,
+                      "speed": 600,
+                      "autoplay": {
+                        "delay": 5000
+                      },
+                      "slidesPerView": "auto",
+                      "pagination": {
+                        "el": ".swiper-pagination",
+                        "type": "bullets",
+                        "clickable": true
+                      }
+                    }
+                  </script>
+
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/kubernetes-dashboard.jpg" alt="Kubernetes Management">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/cicd-pipeline.jpg" alt="CI/CD Pipeline">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/terraform-modules.jpg" alt="Terraform Infrastructure">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/monitoring-dashboard.jpg" alt="Resource Monitoring">
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                  <h3>Project Information</h3>
+                  <ul>
+                    <li><strong>Category</strong>: DevOps / Cloud Infrastructure</li>
+                    <li><strong>Technologies</strong>: Kubernetes, Docker, Terraform, GitHub Actions</li>
+                    <li><strong>Cloud Platforms</strong>: AWS, GCP, Azure</li>
+                    <li><strong>Project Date</strong>: 2023-2024</li>
+                    <li><strong>Status</strong>: Production Systems</li>
+                  </ul>
+                </div>
+                <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                  <h2>Enterprise DevOps & Cloud Infrastructure</h2>
+                  <p>
+                    Comprehensive DevOps solutions including microservices architecture, automated CI/CD pipelines, 
+                    and infrastructure as code across multiple cloud platforms.
+                  </p>
+                  <h4>Components:</h4>
+                  <ul>
+                    <li><strong>Microservices Architecture</strong>: Containerized applications with Kubernetes orchestration</li>
+                    <li><strong>CI/CD Automation</strong>: GitHub Actions pipelines with automated testing and deployment</li>
+                    <li><strong>Infrastructure as Code</strong>: Terraform modules for multi-cloud provisioning</li>
+                    <li><strong>Monitoring & Alerting</strong>: Comprehensive observability with automated scaling</li>
+                    <li><strong>Security Integration</strong>: DevSecOps practices with vulnerability scanning</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Technical Stack Section -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="tech-stack-section" data-aos="fade-up" data-aos-delay="400">
+              <h3 class="text-center mb-4">Technical Stack & Tools</h3>
+              <div class="row">
+                <div class="col-md-3 col-sm-6 mb-3">
+                  <div class="tech-category">
+                    <h5><i class="bi bi-cpu"></i> Machine Learning</h5>
+                    <div class="tech-tags">
+                      <span class="badge bg-primary">Python</span>
+                      <span class="badge bg-primary">TensorFlow</span>
+                      <span class="badge bg-primary">PyTorch</span>
+                      <span class="badge bg-primary">Scikit-learn</span>
+                      <span class="badge bg-primary">Pandas</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                  <div class="tech-category">
+                    <h5><i class="bi bi-cloud"></i> Cloud & DevOps</h5>
+                    <div class="tech-tags">
+                      <span class="badge bg-success">AWS</span>
+                      <span class="badge bg-success">Kubernetes</span>
+                      <span class="badge bg-success">Docker</span>
+                      <span class="badge bg-success">Terraform</span>
+                      <span class="badge bg-success">GitHub Actions</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                  <div class="tech-category">
+                    <h5><i class="bi bi-code-slash"></i> Development</h5>
+                    <div class="tech-tags">
+                      <span class="badge bg-warning">FastAPI</span>
+                      <span class="badge bg-warning">Streamlit</span>
+                      <span class="badge bg-warning">React</span>
+                      <span class="badge bg-warning">PostgreSQL</span>
+                      <span class="badge bg-warning">Redis</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                  <div class="tech-category">
+                    <h5><i class="bi bi-robot"></i> AI/NLP</h5>
+                    <div class="tech-tags">
+                      <span class="badge bg-info">Hugging Face</span>
+                      <span class="badge bg-info">CrewAI</span>
+                      <span class="badge bg-info">LangChain</span>
+                      <span class="badge bg-info">OpenAI API</span>
+                      <span class="badge bg-info">Transformers</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -180,20 +447,14 @@
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
-
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">AI/ML Portfolio</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+        Designed with <i class="bi bi-heart-fill text-danger"></i> for showcasing AI/ML expertise
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
@@ -201,6 +462,97 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+
+  <!-- Custom Styles for Portfolio Details -->
+  <style>
+    .project-tabs {
+      margin-bottom: 2rem;
+    }
+    
+    .project-tabs .nav-link {
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      color: #495057;
+      margin: 0 5px;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .project-tabs .nav-link:hover {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+    
+    .project-tabs .nav-link.active {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+    
+    .tech-stack-section {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    
+    .tech-category {
+      text-align: center;
+      padding: 1rem;
+    }
+    
+    .tech-category h5 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+    }
+    
+    .tech-tags .badge {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+    }
+    
+    .portfolio-info ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .portfolio-info ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .portfolio-info ul li:last-child {
+      border-bottom: none;
+    }
+    
+    .portfolio-description h4 {
+      color: #007bff;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .portfolio-description ul li {
+      margin-bottom: 8px;
+    }
+    
+    @media (max-width: 768px) {
+      .project-tabs .nav-link {
+        margin: 2px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -216,6 +568,24 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // Initialize all Swiper instances when tab is shown
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabButtons = document.querySelectorAll('[data-bs-toggle="pill"]');
+      
+      tabButtons.forEach(button => {
+        button.addEventListener('shown.bs.tab', function(e) {
+          // Reinitialize Swiper in the active tab
+          const activeTab = document.querySelector(e.target.getAttribute('data-bs-target'));
+          const swiper = activeTab.querySelector('.swiper');
+          if (swiper && swiper.swiper) {
+            swiper.swiper.update();
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 
